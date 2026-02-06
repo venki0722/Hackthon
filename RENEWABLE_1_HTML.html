@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>H.A.N.S</title>
+
+  <!-- Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="REN_JS.js"></script>
+
+  <link rel="stylesheet" href="REN_CSS.css">
+</head>
+<body>
+
+<!-- ALERT OVERLAY -->
+<div id="alertOverlay" class="alert-animate">
+  <div class="alertBox">
+    <i class="fa-solid fa-triangle-exclamation alert-icon"></i>
+    <h1>GRID RISK ALERT</h1>
+    <p id="alertText"></p>
+    <button onclick="closeAlert()">ACKNOWLEDGE</button>
+  </div>
+</div>
+
+<!-- WELCOME SCREEN -->
+<div id="welcome" class="fade-in">
+
+  <!-- ANIMATED ICON -->
+  <div class="logo-container">
+    <i class="fa-solid fa-bolt hans-icon"></i>
+  </div>
+
+  <h1 class="title-animate">H.A.N.S</h1>
+  <p class="subtitle slide-in">
+    Human Atmospheric Navigation System
+  </p>
+
+  <p class="desc slide-in-delay">
+    AI-powered platform leveraging three years of atmospheric and renewable
+    energy data to forecast power generation and optimize smart grid scheduling.
+  </p>
+
+  <button class="launch-btn pulse-btn" onclick="startApp()">
+    🚀 LAUNCH SYSTEM
+  </button>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="dashboard-animate">
+
+  <h2 class="section-title">Tomorrow's Weather Forecast</h2>
+
+  <!-- INPUT SECTION -->
+  <div class="inputs inputs-animate">
+    <input id="temp" type="number" placeholder="🌡 Temperature (°C)">
+    <input id="hum" type="number" placeholder="💧 Humidity (%)">
+    <input id="wind" type="number" placeholder="🌬 Wind Speed (m/s)">
+    <button class="predict-btn" onclick="predict()">
+      ⚙ Run Prediction
+    </button>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="results results-animate">
+    <h3 class="subheading">Weather Summary</h3>
+    <p>🌡 <span id="oTemp">--</span> °C</p>
+    <p>💧 <span id="oHum">--</span> %</p>
+    <p>🌬 <span id="oWind">--</span> m/s</p>
+
+    <h3 class="subheading">Power Forecast</h3>
+    <p>☀ Solar Power: <span id="solar">--</span> MW</p>
+    <p>🌬 Wind Power: <span id="windP">--</span> MW</p>
+    <p class="total">
+      ⚡ Total Renewable: <span id="total">--</span> MW
+    </p>
+
+    <p class="grid grid-animate" id="gridMsg"></p>
+  </div>
+
+  <!-- CHART -->
+  <div class="chart-container chart-animate">
+    <canvas id="energyChart"></canvas>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
