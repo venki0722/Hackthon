@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 # Load saved model
-model = joblib.load("renewable_model.pkl")
+model = joblib.load(".pkl")
 
 st.set_page_config(page_title="Renewable Energy Predictor", layout="centered")
 
