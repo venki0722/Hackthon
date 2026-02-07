@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 # Load saved model
-model = joblib.load(".pkl")
+model = joblib.load("Tamil_Nadu_Renewable_Energy_Forecast_2000 (1)(1).pkl")
 
 st.set_page_config(page_title="Renewable Energy Predictor", layout="centered")
 
